@@ -1,1 +1,132 @@
-'PLACEHOLDER'
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Submit original music to GQ Sounds for review.">
+  <title>Submit music — GQ Sounds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#102b5c;--paper:#f3f0e8;--lime:#d8ff43;--orange:#ff6e43;--blue:#1f4e8c;--line:#b8b8b1;--muted:#546477}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.45 "DM Sans",sans-serif}.top{height:72px;border-bottom:1px solid var(--line);padding:0 clamp(22px,7vw,100px);display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:8px;color:inherit;text-decoration:none;font:700 17px "Space Grotesk",sans-serif}.mark{width:31px;height:31px;border:2px solid;border-radius:50%;display:grid;place-items:center;font:700 10px "DM Mono",monospace}.back{font-size:13px;font-weight:700;text-decoration:none;border-bottom:1px solid;padding-bottom:3px}.wrap{max-width:920px;margin:0 auto;padding:76px 24px 100px}.eyebrow{font:11px "DM Mono",monospace;letter-spacing:.7px;margin:0 0 18px}.dot{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--orange);margin-right:8px}h1{font:600 clamp(43px,6vw,74px)/.93 "Space Grotesk",sans-serif;letter-spacing:-4px;margin:0 0 20px}h1 em{font-family:Georgia,serif;font-weight:400}.lede{font-size:17px;max-width:620px;margin:0 0 45px}.notice{display:flex;gap:12px;background:var(--ink);color:#fff;padding:18px 20px;margin:0 0 35px}.notice b{color:var(--lime)}.notice p{margin:0;font-size:14px}.card{background:#fff;border:1px solid var(--line);padding:clamp(22px,5vw,48px);box-shadow:10px 10px #102b5c22}fieldset{border:0;padding:0;margin:0 0 38px}legend{font:600 24px "Space Grotesk",sans-serif;letter-spacing:-1px;margin-bottom:5px}.hint{color:var(--muted);font-size:13px;margin:0 0 21px}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{margin-bottom:18px}.field label{display:block;font-weight:700;font-size:13px;margin-bottom:7px}.required{color:#d13a20}input,select,textarea{display:block;width:100%;border:1px solid #8b979d;background:#fff;color:var(--ink);padding:12px 13px;border-radius:0;font:15px "DM Sans",sans-serif}textarea{min-height:105px;resize:vertical}input:focus,select:focus,textarea:focus{outline:3px solid #d8ff4390;outline-offset:1px}input[type=file]{padding:10px;font-size:13px;background:#f8f7f2}.upload-box{background:#f8f7f2;border:1px dashed #8b979d;padding:16px}.upload-box p{color:var(--muted);font-size:12px;margin:9px 0 0}.check{display:flex;align-items:flex-start;gap:11px;margin:13px 0}.check input{width:18px;height:18px;flex:0 0 auto;margin:2px 0 0}.check label{font-size:13px;line-height:1.45}.submit{width:100%;border:0;background:var(--ink);color:#fff;padding:17px 20px;font:700 15px "DM Sans",sans-serif;cursor:pointer}.submit:hover{background:var(--blue)}.fine{font-size:12px;color:var(--muted);margin:14px 0 0}.error{display:none;background:#fff0ed;border-left:4px solid var(--orange);padding:12px 14px;margin:0 0 20px;font-size:13px}.footer{border-top:1px solid var(--line);padding:30px max(22px,7vw);font-size:12px;color:var(--muted)}@media(max-width:620px){.top{height:64px}.wrap{padding:58px 20px 70px}h1{letter-spacing:-2.8px}.two{grid-template-columns:1fr}.card{padding:23px 18px}.notice{align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <header class="top"><a class="brand" href="index.html"><span class="mark">GQ</span> SOUNDS</a><a class="back" href="index.html">← Back to discovery</a></header>
+  <main class="wrap">
+    <p class="eyebrow"><span class="dot"></span>ARTIST SUBMISSIONS · GQEBERHA</p>
+    <h1>Put your sound<br>on the <em>radar.</em></h1>
+    <p class="lede">Send one original track for the GQ Sounds review queue. If it fits the catalogue, we will contact you before anything is published.</p>
+    <aside class="notice"><div>✦</div><p><b>You keep your rights.</b> Uploading gives GQ Sounds permission to review the track only. Publication needs your approval after our team responds.</p></aside>
+    <form id="artistSubmission" class="card" novalidate>
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+      <div class="error" id="formError" role="alert"></div>
+      <fieldset>
+        <legend>1. Your artist details</legend>
+        <p class="hint">This information is only used to review your music and get in touch.</p>
+        <div class="two">
+          <div class="field"><label for="artist">Artist / stage name <span class="required">*</span></label><input id="artist" name="artist_name" required autocomplete="nickname" maxlength="80"></div>
+          <div class="field"><label for="name">Contact name <span class="required">*</span></label><input id="name" name="contact_name" required autocomplete="name" maxlength="100"></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="email">Email address <span class="required">*</span></label><input id="email" name="email" type="email" required autocomplete="email"></div>
+          <div class="field"><label for="phone">WhatsApp number <span class="required">*</span></label><input id="phone" name="whatsapp_number" type="tel" required autocomplete="tel" placeholder="e.g. 071 234 5678"></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="area">Where are you based? <span class="required">*</span></label><input id="area" name="area" required value="Gqeberha / Nelson Mandela Bay" maxlength="100"></div>
+          <div class="field"><label for="genre">Main genre <span class="required">*</span></label><select id="genre" name="genre" required><option value="">Choose a genre</option><option>Amapiano</option><option>Afro-house</option><option>Afro-pop</option><option>Alternative</option><option>Gqom</option><option>Hip-hop</option><option>House</option><option>Indie</option><option>Jazz</option><option>R&amp;B / Soul</option><option>Other</option></select></div>
+        </div>
+        <div class="field"><label for="link">Instagram, TikTok, or music link</label><input id="link" name="artist_link" type="url" placeholder="https://"></div>
+      </fieldset>
+      <fieldset>
+        <legend>2. Your track</legend>
+        <p class="hint">One original, unreleased or independently released track at a time.</p>
+        <div class="two">
+          <div class="field"><label for="track">Track title <span class="required">*</span></label><input id="track" name="track_title" required maxlength="120"></div>
+          <div class="field"><label for="language">Language(s)</label><input id="language" name="languages" maxlength="100" placeholder="e.g. isiXhosa, English"></div>
+        </div>
+        <div class="field upload-box"><label for="audio">Audio file <span class="required">*</span></label><input id="audio" name="attachment" type="file" accept="audio/mpeg,audio/wav,audio/x-wav,audio/mp4,.mp3,.wav,.m4a" required><p>MP3, WAV, or M4A only. Maximum <b>8 MB</b> so the submission can be delivered safely.</p></div>
+        <div class="field upload-box"><label for="cover">Cover art (optional)</label><input id="cover" name="cover_art" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp"><p>JPG, PNG, or WebP. Maximum <b>2 MB</b>. Please use artwork you own or can use.</p></div>
+        <div class="field"><label for="notes">Tell us about the track</label><textarea id="notes" name="track_notes" maxlength="1000" placeholder="What is the story, mood, or local connection behind it?"></textarea></div>
+      </fieldset>
+      <fieldset>
+        <legend>3. Rights confirmation</legend>
+        <p class="hint">We do not publish music automatically. These checks keep the platform fair to everyone.</p>
+        <div class="check"><input id="original" name="rights_original_work" type="checkbox" value="confirmed" required><label for="original">I confirm that I own or control the rights needed to submit this original track, including the beat, samples, and artwork where applicable. <span class="required">*</span></label></div>
+        <div class="check"><input id="review" name="review_permission" type="checkbox" value="confirmed" required><label for="review">I give GQ Sounds permission to receive and review this submission. I understand that it will not be streamed or publicly listed unless GQ Sounds contacts me and I approve publication. <span class="required">*</span></label></div>
+        <div class="check"><input id="contact" name="contact_permission" type="checkbox" value="confirmed" required><label for="contact">I agree that GQ Sounds may contact me about this submission using the email address or WhatsApp number above. <span class="required">*</span></label></div>
+      </fieldset>
+      <button class="submit" id="submitButton" type="submit">Send track for review →</button>
+      <p class="fine">By submitting, you are sending your files securely for review. No distribution deal, exclusivity, or ownership transfer is created by this form.</p>
+    </form>
+  </main>
+  <footer class="footer">GQ Sounds · Independent music discovery for Gqeberha</footer>
+  <script>
+    const form=document.getElementById('artistSubmission');
+    const error=document.getElementById('formError');
+    const submitButton=document.getElementById('submitButton');
+    const endpoint='https://oricfqplguhzkelqtwqo.supabase.co/functions/v1/create-submission';
+    const maxAudio=8*1024*1024,maxCover=2*1024*1024,maxTotal=10*1024*1024;
+    const audioTypes=['audio/mpeg','audio/wav','audio/x-wav','audio/mp4','audio/m4a'];
+    const coverTypes=['image/jpeg','image/png','image/webp'];
+    const showError=message=>{error.textContent=message;error.style.display='block';error.scrollIntoView({behavior:'smooth',block:'center'});};
+    const mimeFor=file=>{
+      if(file.type)return file.type;
+      const name=file.name.toLowerCase();
+      if(name.endsWith('.mp3'))return 'audio/mpeg';
+      if(name.endsWith('.wav'))return 'audio/wav';
+      if(name.endsWith('.m4a'))return 'audio/m4a';
+      if(name.endsWith('.jpg')||name.endsWith('.jpeg'))return 'image/jpeg';
+      if(name.endsWith('.png'))return 'image/png';
+      if(name.endsWith('.webp'))return 'image/webp';
+      return '';
+    };
+    const setBusy=(busy,label)=>{submitButton.disabled=busy;submitButton.textContent=label;};
+    form.addEventListener('submit',async event=>{
+      event.preventDefault();error.style.display='none';
+      if(!form.checkValidity()){form.reportValidity();return;}
+      const audio=document.getElementById('audio').files[0];
+      const cover=document.getElementById('cover').files[0];
+      const audioType=audio&&mimeFor(audio),coverType=cover&&mimeFor(cover);
+      let message='';
+      if(!audio||!audioTypes.includes(audioType))message='Please upload an MP3, WAV, or M4A audio file.';
+      else if(audio.size>maxAudio)message='Your audio file is over 8 MB. Export a smaller MP3 and try again.';
+      else if(cover&&!coverTypes.includes(coverType))message='Please use a JPG, PNG, or WebP cover image.';
+      else if(cover&&cover.size>maxCover)message='Your cover artwork is over 2 MB. Please use a smaller image.';
+      else if(cover&&audio.size+cover.size>maxTotal)message='Your combined files are over 10 MB. Please use smaller files.';
+      if(message){showError(message);return;}
+      const payload={
+        action:'create',artistName:form.artist_name.value,contactName:form.contact_name.value,
+        email:form.email.value,whatsappNumber:form.whatsapp_number.value,area:form.area.value,
+        genre:form.genre.value,artistLink:form.artist_link.value,trackTitle:form.track_title.value,
+        languages:form.languages.value,trackNotes:form.track_notes.value,
+        rightsOriginalWork:form.rights_original_work.checked,reviewPermission:form.review_permission.checked,
+        contactPermission:form.contact_permission.checked,honeypot:document.getElementById('website').value,
+        audio:{filename:audio.name,contentType:audioType,size:audio.size},
+        cover:cover?{filename:cover.name,contentType:coverType,size:cover.size}:undefined
+      };
+      try{
+        setBusy(true,'Preparing secure upload…');
+        const created=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+        const session=await created.json();
+        if(!created.ok)throw new Error(session.error||'We could not start your submission.');
+        if(session.accepted&&!session.uploads){window.location.href='submission-received.html';return;}
+        const upload=async(file,details)=>{
+          const response=await fetch(details.signedUrl,{method:'PUT',headers:{'Content-Type':mimeFor(file)},body:file});
+          if(!response.ok)throw new Error('Your file upload did not finish. Please try again.');
+        };
+        setBusy(true,'Uploading your track…');
+        await upload(audio,session.uploads.audio);
+        if(cover){setBusy(true,'Uploading cover art…');await upload(cover,session.uploads.cover);}
+        setBusy(true,'Sending for review…');
+        const completed=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'complete',submissionId:session.submissionId,uploadToken:session.uploadToken})});
+        const result=await completed.json();
+        if(!completed.ok)throw new Error(result.error||'We could not complete your submission.');
+        window.location.href='submission-received.html';
+      }catch(err){showError(err.message||'We could not send your submission. Please try again.');setBusy(false,'Send track for review →');}
+    });
+  </script>
+</body>
+</html>
