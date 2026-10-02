@@ -1,0 +1,6 @@
+project_id = "gq-sounds"
+
+[functions.create-submission]
+# The public artist form has no Supabase user session. The function verifies the
+# request itself (origin, honeypot, optional Turnstile and one-time upload token).
+verify_jwt = false
